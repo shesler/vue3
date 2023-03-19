@@ -4,8 +4,13 @@ let eventBus = new Vue()
 Vue.component('desk', {
     template: `
         <div class='desk'>
-           <button class="btn" @click="showModal = true">Create</button>
-           <createTask v-if="showModal"></createTask>
+        <header>
+            <div class="head1">
+                <h1>{{ name }}</h1>
+               <button class="btn1" @click="showModal = true">Create</button>
+               <createTask v-if="showModal"></createTask>
+           </div>
+        </header>
            <div class="bt1">
               <div>
                  <col1></col1>
@@ -18,7 +23,8 @@ Vue.component('desk', {
     `,
     data() {
         return {
-            showModal: false
+            showModal: false,
+            name: 'KANBAN BOARD'
         }
     },
     updated() {
@@ -32,7 +38,7 @@ Vue.component('desk', {
 Vue.component('col4', {
     template: `
         <div class="col">
-           <div v-if="errors" v-for="error in errors" class="errors" ">
+            <div v-if="errors" v-for="error in errors" class="errors"">
             <p>{{ error }}</p>
         </div>
         <h2>COMPLETED TASKS</h2>
@@ -91,7 +97,7 @@ Vue.component('col4', {
 Vue.component('col3', {
     template: `
         <div class="col">
-            <div v-if="errors" v-for="error in errors" class="errors" ">
+            <div v-if="errors" v-for="error in errors" class="errors"">
             <p>{{ error }}</p>
         </div>
         <h2>TESTING</h2>
@@ -136,8 +142,8 @@ Vue.component('col3', {
                                 <button class="edit" @click="edit(task)">Edit</button>
                             </div>
                             <div>
-                                <button class="arrow" @click="returnTask(task)">↩</button>
-                                <button class="arrow" @click="goRight(task)">➥</button>
+                                <button class="arrow" @click="returnTask(task)"><<<</button>
+                                <button class="arrow" @click="goRight(task)">>>></button>
                             </div>
                         </div>
                     </div>
@@ -192,7 +198,7 @@ Vue.component('col3', {
 Vue.component('col2', {
     template: `
         <div class="col">
-            <div v-if="errors" v-for="error in errors" class="errors" ">
+            <div v-if="errors" v-for="error in errors" class="errors"">
             <p>{{ error }}</p>
         </div>
         <h2>TASKS IN WORK</h2>
@@ -244,8 +250,8 @@ Vue.component('col2', {
                                 <button class="edit" @click="edit(task)">Edit</button>
                             </div>
                             <div>
-                                <button class="arrow" @click="goLeft(task)">↩</button>
-                                <button class="arrow" @click="goRight(task)">➥</button>
+                                <button class="arrow" @click="goLeft(task)"><<<</button>
+                                <button class="arrow" @click="goRight(task)">>>></button>
                             </div>
                         </div>
                     </div>
@@ -315,7 +321,7 @@ Vue.component('col1', {
             <div v-for="task in firstColList" class="col-item">
         
                 <div class="edit_form title" v-if="task.edit">
-                    <label for="list_name">Name: </label>
+                    <label for="list_name" class="title">Name: </label>
                     <input type="text" id="list_name" v-model="task.list_name">
         
                     <label for="taskDisk" class="title">Description: </label>
@@ -334,21 +340,21 @@ Vue.component('col1', {
                     <p class="title">Description: </p>
                     <p>{{ task.taskDisc }}</p>
         
-                    <p class="title">Дедлайн:</p>
+                    <p class="title">Deadline:</p>
                     <p>{{ task.deadLine }}</p>
         
                     <p v-if="task.edited" class="title">Last edit: </p>
                     <p>{{ task.edited }}</p>
         
-                    <pv-if="task.bag_report!=0" class="title">Баг-репорт:</p>
+                    <p v-if="task.bag_report!=0" class="title">Bug-report:</p>
                         <p v-if="task.bag_report!=0" v-for="bug in task.bag_report">{{ bug }}</p>
                         <div class="btns">
                             <div>
-                                <button class="del" @click="del(task)">Удалить</button>
-                                <button class="edit" @click="edit(task)">Редактировать</button>
+                                <button class="del" @click="del(task)">Delete</button>
+                                <button class="edit" @click="edit(task)">Edit</button>
                             </div>
                             <div>
-                                <button class="arrow" @click="goRight(task)">➥</button>
+                                <button class="arrow" @click="goRight(task)">>>></button>
                             </div>
                         </div>
                 </div>
@@ -392,15 +398,15 @@ Vue.component('createTask', {
     template: `
         <div class="modal-mask">
             <form @submit.prevent="onSubmit">
-                <p @click="close">✖</p>
+                <p class="crest" @click="close">✖</p>
                 <h2>Create a task</h2>
-                <label class="list_name" for="list_name">Name: </label>
+                <label class="title" for="list_name">Name: </label>
                 <input type="text" v-model="list_name" id="list_name" required="required">
         
-                <label for="task">Description: </label>
-                <textarea type="text" v-model="taskDisc" id="task" required="required"></textarea>
+                <label class="title" for="task">Description: </label>
+                <textarea type="text" v-model="taskDisc" id="task" required="required" rows="10" cols="20" wrap="hard"></textarea>
         
-                <label for="deadline">Deadline: </label>
+                <label class="title" for="deadline">Deadline: </label>
                 <input type="date" v-model="deadline" required="required">
         
                 <input type="submit" class="btn" @click="onSubmit">
@@ -442,9 +448,7 @@ Vue.component('createTask', {
 
 let app = new Vue({
     el: '#app',
-    data: {
-        name: 'KANBAN BOARD'
-    }
 })
+
 
 

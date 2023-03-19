@@ -11,28 +11,37 @@ body {
     color: #FFF5EE;
 }
 
-header {
-    width: 100vw;
+.head1 {
     background-color: #FFF5EE;
-    height: 50px;
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
 }
 
 h1 {
     color: #3f4149;
     font-size: 30pt;
-    margin-left: 175px;
+    margin-left: 140px;
+    margin-top: 20px;
+}
+
+h2 {
+    font-size: 30pt;
+    font-weight: bolder;
+    text-align: center;
 }
 
 .col {
-    width: 400px;
+    margin-top: 20px;
+    max-width: 450px;
+    height: auto;
 }
 
 form {
-    width: 300px;
     display: flex;
     flex-direction: column;
-    background-color: white;
-    padding: 30px;
+    background-color: darkslategray;
+    padding: 5px 30px 5px;
     border-radius: 20px;
     height: 550px;
 }
@@ -40,72 +49,89 @@ form {
 input {
     padding: 5px;
     border-radius: 5px;
-    border: 1px solid #3f4149;
+    border: none;
     margin-top: 10px;
     margin-bottom: 10px;
 }
+
 label {
     font-size: 15px;
 }
 
-.btn {
-    background-color: #3655c4;
-    padding: 10px;
-    color: white;
+.btn1 {
+    background-color: darkslategray;
+    width: 120px;
+    height: 40px;
+    color: #FFF5EE;
     border: none;
+    transition: .3s linear;
+    font-family: 'Amatic SC', cursive;
+    font-size: 20pt;
+    font-weight: bold;
+    margin-top: 23px;
+    margin-right: 140px;
+    border-radius: 5px;
+}
+
+.btn1:hover {
+    background-color: darkgreen;
+    transition: .3s linear;
+}
+
+.btn {
+    background-color: seagreen;
+    width: 140px;
+    height: 50px;
+    color: #FFF5EE;
+    border: none;
+    transition: .3s linear;
+    font-family: 'Amatic SC', cursive;
+    font-size: 20pt;
+    font-weight: bold;
+    margin: 30px auto;
 }
 
 .btn:hover {
-    background-color: #253c8a;
-    transition: .2s;
+    background-color: darkgreen;
+    transition: .3s linear;
 }
 
 form > h2, p {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    color: #FFF5EE;
+    max-width: 300px;
+    height: auto;
+    white-space: normal;
 }
-
 form > p {
-    margin-top: 20px;
+    margin-top: 10px;
+    color: #FFF5EE;
 }
-
-.desk {
+form > h2 {
+    margin: 5px auto;
 }
 
 .bt1 {
-    width: 100%;
-
+    background-color: darkslategray;
 }
-
 .bt1 > div {
-    max-width: 1800px;
-    margin: 0 auto;
     display: flex;
-    flex-direction: row;
-    text-align: center;
-    font-size: 20pt;
-    background-color: #FFF5EE;
-    color: #3f4149;
-}
-
-.col {
-    margin-top: 20px;
+    justify-content: space-around;
+    font-size: 15pt;
+    font-weight: bolder;
 }
 
 .col-item {
-    display: flex;
-    flex-direction: column;
-    background-color: white;
-    padding: 30px;
-    border-radius: 20px;
+    background-color: darkslategray;
+    padding: 30px 0 30px;
+    color: #FFF5EE;
     margin-bottom: 40px;
-}
-
-.task-list-name {
-    font-weight: 1000;
+    max-width: 300px;
+    height: auto;
 }
 
 .col > h2 {
-    margin-bottom: 20px;
+    margin: 0 auto 20px;
 }
 
 .done {
@@ -143,7 +169,6 @@ textarea {
     padding: 10px;
     height: 100px;
     margin-bottom: 20px;
-    border: 1px solid #3f4149;
     border-radius: 5px;
 }
 
@@ -180,9 +205,6 @@ button {
 
 .modal-mask {
     position: absolute;
-    z-index: 1000;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
@@ -199,7 +221,6 @@ button {
     border-radius: 2px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.33);
     transition: all 0.3s ease;
-    font-family: Helvetica, Arial, sans-serif;
 }
 
 .modal-header h3 {
@@ -225,7 +246,6 @@ button {
 
 .modal-enter .modal-container,
 .modal-leave-active .modal-container {
-    -webkit-transform: scale(1.1);
     transform: scale(1.1);
 }
 
@@ -237,32 +257,69 @@ button {
 }
 
 .del {
-    width: 100px;
-    color: white;
-    background-color: darkred;
-    padding: 5px;
+    width: 130px;
+    color: #FFF5EE;
+    background-color: red;
+    padding: 5px 5px 5px;
     border-radius: 5px;
+    font-family: 'Amatic SC', cursive;
+    font-size: 15pt;
+    font-weight: bolder;
 }
 
 .edit {
-    width: 120px;
-    color: white;
-    background-color: #3655c4;
-    padding: 5px;
+    width: 130px;
+    color: #FFF5EE;
+    background-color: forestgreen;
+    padding: 5px 5px 5px;
     border-radius: 5px;
+    font-family: 'Amatic SC', cursive;
+    font-size: 15pt;
+    font-weight: bolder;
 }
 
 .arrow {
     font-weight: bold;
-    font-size: 20px;
-    color: #3655c4;
+    font-size: 15pt;
+    color: #FFF5EE;
     background-color: rgba(0,0,0,0%);
+    margin: 10px auto;
 }
 
 .title {
     font-weight: bold;
+    font-size: 15pt;
+    margin-top: 5px;
 }
 
 .btn {
     border-radius: 5px;
 }
+
+.crest {
+    margin-left: 280px;
+}
+
+h3 {
+    font-size: 22pt;
+}
+
+.reasonForReturn {
+    display: flex;
+    flex-direction: column;
+}
+.edit_form{
+    display: flex;
+    flex-direction: column;
+}
+.edit_form.title {
+    display: flex;
+    flex-direction: column;
+}
+
+#taskDisc {
+    height: 100px;
+}
+
+
+
