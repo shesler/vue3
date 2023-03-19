@@ -1,0 +1,268 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("https://avatars.dzeninfra.ru/get-zen_doc/1112142/pub_5b187eb28c8be3f81e7f2ad7_5b18803f780019cf22bf9bb1/orig");
+    background-attachment: fixed;
+    font-family: 'Amatic SC', cursive;
+    color: #FFF5EE;
+}
+
+header {
+    width: 100vw;
+    background-color: #FFF5EE;
+    height: 50px;
+}
+
+h1 {
+    color: #3f4149;
+    font-size: 30pt;
+    margin-left: 175px;
+}
+
+.col {
+    width: 400px;
+}
+
+form {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 30px;
+    border-radius: 20px;
+    height: 550px;
+}
+
+input {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #3f4149;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+label {
+    font-size: 15px;
+}
+
+.btn {
+    background-color: #3655c4;
+    padding: 10px;
+    color: white;
+    border: none;
+}
+
+.btn:hover {
+    background-color: #253c8a;
+    transition: .2s;
+}
+
+form > h2, p {
+    margin-bottom: 20px;
+}
+
+form > p {
+    margin-top: 20px;
+}
+
+.desk {
+}
+
+.bt1 {
+    width: 100%;
+
+}
+
+.bt1 > div {
+    max-width: 1800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    font-size: 20pt;
+    background-color: #FFF5EE;
+    color: #3f4149;
+}
+
+.col {
+    margin-top: 20px;
+}
+
+.col-item {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 30px;
+    border-radius: 20px;
+    margin-bottom: 40px;
+}
+
+.task-list-name {
+    font-weight: 1000;
+}
+
+.col > h2 {
+    margin-bottom: 20px;
+}
+
+.done {
+    text-decoration: line-through;
+}
+
+.disabled {
+    color: #cccccc;
+}
+
+.errors {
+    color: darkred;
+    background-color: #ff9595;
+    width: 100%;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.block {
+    color: #858891;
+}
+
+button > img {
+    width: 10%;
+    height: 10%;
+}
+
+textarea {
+    margin-top: 10px;
+    resize: none;
+    padding: 10px;
+    height: 100px;
+    margin-bottom: 20px;
+    border: 1px solid #3f4149;
+    border-radius: 5px;
+}
+
+.deadline-true {
+    color: #3655c4;
+}
+
+.deadline-false {
+    color: darkred;
+}
+
+button {
+    border: none;
+    background-color: white;
+}
+
+.btns {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.btns > div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.submit {
+    border: 1px solid #3f4149;
+    padding: 5px;
+    border-radius: 2px;
+    margin-bottom: 20px;
+}
+
+.modal-mask {
+    position: absolute;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.3s ease;
+}
+
+.modal-container {
+    width: 300px;
+    padding: 20px 30px;
+    background-color: #fff;
+    border-radius: 2px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.33);
+    transition: all 0.3s ease;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.modal-header h3 {
+    margin-top: 0;
+    color: #42b983;
+}
+
+.modal-body {
+    margin: 20px 0;
+}
+
+.modal-default-button {
+    float: right;
+}
+
+.modal-enter {
+    opacity: 0;
+}
+
+.modal-leave-active {
+    opacity: 0;
+}
+
+.modal-enter .modal-container,
+.modal-leave-active .modal-container {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.create_task {
+    border-radius: 5px;
+    border: 1px solid #3f4149;
+    padding: 10px;
+    background-color: #d5deff;
+}
+
+.del {
+    width: 100px;
+    color: white;
+    background-color: darkred;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.edit {
+    width: 120px;
+    color: white;
+    background-color: #3655c4;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.arrow {
+    font-weight: bold;
+    font-size: 20px;
+    color: #3655c4;
+    background-color: rgba(0,0,0,0%);
+}
+
+.title {
+    font-weight: bold;
+}
+
+.btn {
+    border-radius: 5px;
+}
