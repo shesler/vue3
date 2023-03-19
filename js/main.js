@@ -108,7 +108,7 @@ Vue.component('col3', {
                     <input type="text" id="list_name" v-model="task.list_name">
         
                     <label class="title" for="taskDisk">Description: </label>
-                    <input type="text" id="taskDisc" v-model="task.taskDisc">
+                    <textarea type="text" id="taskDisc" v-model="task.taskDisc"></textarea>
         
                     <label class="title" for="deadLine">Deadline: </label>
                     <input type="date" id="deadLine" v-model="task.deadLine">
@@ -207,7 +207,7 @@ Vue.component('col2', {
         
                 <div v-if="show">
                     <label class="title">Bug-report: </label>
-                    <textarea type="text" v-model="bag_report_itm"></textarea>
+                    <textarea type="text" v-model="bag_report_itm" rows="10" cols="20" wrap="hard"></textarea>
         
                     <input type="submit" @click="go(task)" class="btn">
                 </div>
@@ -218,7 +218,7 @@ Vue.component('col2', {
                         <input type="text" id="list_name" v-model="task.list_name">
         
                         <label for="taskDisk" class="title">Description: </label>
-                        <input type="text" id="taskDisc" v-model="task.taskDisc">
+                        <textarea type="text" id="taskDisc" v-model="task.taskDisc"></textarea>
         
                         <label for="deadLine" class="title">Deadline: </label>
                         <input type="date" id="deadLine" v-model="task.deadLine">
@@ -325,7 +325,7 @@ Vue.component('col1', {
                     <input type="text" id="list_name" v-model="task.list_name">
         
                     <label for="taskDisk" class="title">Description: </label>
-                    <input type="text" id="taskDisc" v-model="task.taskDisc">
+                    <textarea type="text" id="taskDisc" v-model="task.taskDisc"></textarea>
         
                     <label for="deadLine" class="title">Deadline: </label>
                     <input type="date" id="deadLine" v-model="task.deadLine">

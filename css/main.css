@@ -40,7 +40,7 @@ h2 {
 form {
     display: flex;
     flex-direction: column;
-    background-color: darkslategray;
+    background-color: lightcyan;
     padding: 5px 30px 5px;
     border-radius: 20px;
     height: 550px;
@@ -49,7 +49,7 @@ form {
 input {
     padding: 5px;
     border-radius: 5px;
-    border: none;
+    border: 1px solid;
     margin-top: 10px;
     margin-bottom: 10px;
 }
@@ -76,6 +76,7 @@ label {
 .btn1:hover {
     background-color: darkgreen;
     transition: .3s linear;
+    transform: scale(1.2);
 }
 
 .btn {
@@ -98,14 +99,14 @@ label {
 
 form > h2, p {
     margin-bottom: 10px;
-    color: #FFF5EE;
+    color: #3f4149;
     max-width: 300px;
     height: auto;
     white-space: normal;
 }
 form > p {
     margin-top: 10px;
-    color: #FFF5EE;
+    color: #3f4149;
 }
 form > h2 {
     margin: 5px auto;
@@ -122,12 +123,18 @@ form > h2 {
 }
 
 .col-item {
-    background-color: darkslategray;
-    padding: 30px 0 30px;
-    color: #FFF5EE;
+    background-color: lightcyan;
+    padding: 20px 15px 20px;
+    border-radius: 10px;
+    transition: transform .3s;
+    color: #3f4149;
     margin-bottom: 40px;
     max-width: 300px;
     height: auto;
+}
+
+.col-item:hover {
+    transform: scale(1.06);
 }
 
 .col > h2 {
@@ -251,37 +258,38 @@ button {
 
 .create_task {
     border-radius: 5px;
-    border: 1px solid #3f4149;
     padding: 10px;
     background-color: #d5deff;
 }
 
 .del {
     width: 130px;
-    color: #FFF5EE;
-    background-color: red;
+    color: lightcyan;
+    background-color: darkred;
     padding: 5px 5px 5px;
     border-radius: 5px;
     font-family: 'Amatic SC', cursive;
-    font-size: 15pt;
+    font-size: 18pt;
     font-weight: bolder;
+    margin-top: 10px;
 }
 
 .edit {
     width: 130px;
-    color: #FFF5EE;
-    background-color: forestgreen;
+    color: lightcyan;
+    background-color: darkslategrey;
     padding: 5px 5px 5px;
     border-radius: 5px;
     font-family: 'Amatic SC', cursive;
-    font-size: 15pt;
+    font-size: 18pt;
     font-weight: bolder;
+    margin-top: 10px;
 }
 
 .arrow {
     font-weight: bold;
     font-size: 15pt;
-    color: #FFF5EE;
+    color: #3f4149;
     background-color: rgba(0,0,0,0%);
     margin: 10px auto;
 }
@@ -290,6 +298,7 @@ button {
     font-weight: bold;
     font-size: 15pt;
     margin-top: 5px;
+    color: #3f4149;
 }
 
 .btn {
@@ -311,6 +320,9 @@ h3 {
 .edit_form{
     display: flex;
     flex-direction: column;
+    max-width: 450px;
+    height: auto;
+
 }
 .edit_form.title {
     display: flex;
